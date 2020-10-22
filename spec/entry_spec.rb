@@ -30,6 +30,7 @@ RSpec.describe Entry do
 				expect(entry).to respond_to(:email)
 			end
 			
+			
 			describe "#to_s" do
 				it "prints and entry as a string" do
 					entry = Entry.new('Ada Lovelace', '010.012.1815', 'augusta.king@lovelace.com')
