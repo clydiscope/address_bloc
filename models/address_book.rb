@@ -1,4 +1,4 @@
-#!/usr/bin/ruby
+ #!/usr/bin/ruby
 
 require_relative 'entry' #a convenient substitute of require that assumes a relative path
 require "csv"
