@@ -22,6 +22,7 @@ require "csv"
 			entries.insert(index, Entry.new(name, phone_number, email))
 		end
 		
+
 		def import_from_csv(file_name)
 			csv_text = File.read(file_name)
 			csv = CSV.parse(csv_text, headers: true, skip_blanks: true)
@@ -49,5 +50,16 @@ require "csv"
 				end
 			end
 			return nil
+		end
+
+		def remove_entry(name, phone_number, email)
+			index = 0
+			entries.each do |entry|
+				if name == entry.name
+					break
+				end
+			index += 1
+			end
+			entries.delete_at(index)
 		end
 	end
